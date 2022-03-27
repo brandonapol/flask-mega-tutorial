@@ -1,0 +1,101 @@
+2022-03-22 08:02:34,638 INFO: Microblog startup [in /Users/brandonapol/Documents/Tutorials/grinberg/app/__init__.py:43]
+2022-03-22 08:02:38,247 INFO: Microblog startup [in /Users/brandonapol/Documents/Tutorials/grinberg/app/__init__.py:43]
+2022-03-24 17:27:52,066 INFO: Microblog startup [in /Users/brandonapol/Documents/Tutorials/grinberg/app/__init__.py:47]
+2022-03-24 17:34:45,328 INFO: Microblog startup [in /Users/brandonapol/Documents/Tutorials/grinberg/app/__init__.py:47]
+2022-03-24 17:36:33,980 INFO: Microblog startup [in /Users/brandonapol/Documents/Tutorials/grinberg/app/__init__.py:47]
+2022-03-24 17:37:56,407 INFO: Microblog startup [in /Users/brandonapol/Documents/Tutorials/grinberg/app/__init__.py:47]
+2022-03-24 18:20:25,657 INFO: Microblog startup [in /Users/brandonapol/Documents/Tutorials/grinberg/app/__init__.py:49]
+2022-03-24 18:20:35,511 ERROR: Exception on /user/lacroix [GET] [in /Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/app/routes.py", line 75, in user
+    return render_template('user.html', user=user, posts=posts, form=form)
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/app/templates/user.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
+    {% block content -%}
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/app/templates/base.html", line 48, in block 'content'
+    {% block app_content %}{% endblock %}
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/app/templates/user.html", line 34, in block 'app_content'
+    {% include '_post.html' %}
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/app/templates/_post.html", line 12, in top-level template code
+    said {{ moment(post.timestamp).fromNow() }}:
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/flask_moment/__init__.py", line 204, in fromNow
+    return self._render("fromNow", no_suffix=int(no_suffix),
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/flask_moment/__init__.py", line 161, in _render
+    t = self._timestamp_as_iso_8601(self.timestamp)
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/flask_moment/__init__.py", line 157, in _timestamp_as_iso_8601
+    return timestamp.strftime('%Y-%m-%dT%H:%M:%S' + tz)
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'timestamp'
+2022-03-24 18:21:34,967 ERROR: Exception on /user/lacroix [GET] [in /Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/app/routes.py", line 75, in user
+    return render_template('user.html', user=user, posts=posts, form=form)
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/app/templates/user.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
+    {% block content -%}
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/app/templates/base.html", line 48, in block 'content'
+    {% block app_content %}{% endblock %}
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/app/templates/user.html", line 34, in block 'app_content'
+    {% include '_post.html' %}
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/app/templates/_post.html", line 12, in top-level template code
+    said {{ moment(post.timestamp).fromNow() }}:
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/flask_moment/__init__.py", line 204, in fromNow
+    return self._render("fromNow", no_suffix=int(no_suffix),
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/flask_moment/__init__.py", line 161, in _render
+    t = self._timestamp_as_iso_8601(self.timestamp)
+  File "/Users/brandonapol/Documents/Tutorials/grinberg/venv/lib/python3.9/site-packages/flask_moment/__init__.py", line 157, in _timestamp_as_iso_8601
+    return timestamp.strftime('%Y-%m-%dT%H:%M:%S' + tz)
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'timestamp'
